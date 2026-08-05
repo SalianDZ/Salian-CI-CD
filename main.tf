@@ -38,12 +38,12 @@ resource "azurerm_mssql_server" "sqlserver" {
 }
 
 resource "azurerm_mssql_database" "database" {
-  name           = var.sql_database_name
-  server_id      = azurerm_mssql_server.sqlserver.id
-  collation      = "SQL_Latin1_General_CP1_CI_AS"
-  license_type   = "LicenseIncluded"
-  sku_name       = "Basic"
-  zone_redundant = false
+  name                 = var.sql_database_name
+  server_id            = azurerm_mssql_server.sqlserver.id
+  collation            = "SQL_Latin1_General_CP1_CI_AS"
+  license_type         = "LicenseIncluded"
+  sku_name             = "Basic"
+  zone_redundant       = false
   storage_account_type = "Local"
 }
 
